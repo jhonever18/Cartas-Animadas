@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cartas de Amor</title>
+</head>
+<body>
+    <div class="container">
+        <script>
+            const mensajes = [
+                "Eres mi persona favorita ❤️", "Siempre iluminas mi día ☀️", "Cada momento contigo es especial 💫", "Te amo con todo mi corazón ❤️", 
+                "Eres lo mejor que me ha pasado 💖", "Tu sonrisa ilumina mi mundo 🌎", "Eres mi felicidad infinita 💕", "Gracias por estar siempre a mi lado 🤗", 
+                "No hay nadie como tú 💓", "Eres mi sueño hecho realidad ✨", "Cada día contigo es un regalo 🎁", "Eres mi refugio en la tormenta 🌧️❤️", 
+                "Tu amor es mi motor 🚀", "Siempre pienso en ti 🌸", "Mi vida depende de ti 💓", "Eres mi mejor historia 📖", 
+                "No hay distancia que nos separe 💞", "Cada dia me enamoro mas de ti ✨", "Eres mi más linda casualidad 🍀", "Siempre quiero verte feliz 😊"
+            ];
+            
+            mensajes.forEach(mensaje => {
+                document.write(`
+                    <div class="carta" onclick="abrirCarta(this)">
+                        <div class="sobre"></div>
+                        <div class="mensaje">${mensaje}</div>
+                    </div>
+                `);
+            });
+        </script>
+    </div>
+
+    <script>
+        function abrirCarta(elemento) {
+            elemento.classList.toggle('abierta');
+        }
+    </script>
+</body>
+</html>
